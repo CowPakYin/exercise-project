@@ -14,12 +14,12 @@
            url('../fonts/Helvetica.eot') format("embedded-opentype");
   } **/
 
-  h1, h2{
-    color: white;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    font-weight: normal;
-    text-align: center;
-  }
+ .title-container{
+  position: relative;
+  height: 600px;
+  margin: auto 0;
+
+ }
   
   h1{ 
       font-size: 2vw;
@@ -32,6 +32,7 @@
   
   .mainimage{
     position: absolute;
+
   }
   .lpylogo{
       fill: white;
