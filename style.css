@@ -23,13 +23,16 @@
   
   h1{ 
       font-size: 2vw;
-
+      padding-top: 100px;
       }
   
   h2{
       font-size: 1.3vw; 
   }
   
+  .mainimage{
+    position: absolute;
+  }
   .lpylogo{
       fill: white;
       display: block; 
