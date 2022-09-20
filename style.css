@@ -14,12 +14,12 @@ body{
            url('../fonts/Helvetica.eot') format("embedded-opentype");
   } **/
 
-  nav ul{
+  #nav ul{
     display: inline-block;
     list-style-type: none;
   }
 
-  
+
 
  .title-container{
   position: relative;
