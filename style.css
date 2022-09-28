@@ -21,29 +21,20 @@ body{
   justify-content: space-between;
   padding-left: 10%;
   padding-right: 10%;
-  top: 0;
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.navlogo {
-  fill: white;
-  height: 20%;
-  width: 20%;
-  float: left;
-}
-
-.navbar ul li {
+.navbar p {
   list-style-type: none;
   display: inline-block;
   padding: 0px 30px;
 }
 
-.navbar ul{
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.narbar ul li a{
+.navbar p a{
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -85,8 +76,7 @@ body{
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    pointer-events: none;
-    z-index: -1 ;
+    z-index: -1;
     border: none;
     overflow: hidden;
   }
