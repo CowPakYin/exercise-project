@@ -15,12 +15,13 @@ body{
            url('../fonts/Helvetica.eot') format("embedded-opentype");
   } **/
 
-nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 10%;
   padding-right: 10%;
+  top: 0;
 }
 
 .navlogo {
@@ -30,19 +31,19 @@ nav {
   float: left;
 }
 
-nav ul li {
+.navbar ul li {
   list-style-type: none;
   display: inline-block;
   padding: 0px 30px;
 }
 
-nav ul{
+.navbar ul{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-nav ul li a{
+.narbar ul li a{
   color: white;
   text-decoration: none;
   font-weight: bold;
