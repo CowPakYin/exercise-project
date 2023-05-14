@@ -8,6 +8,29 @@ body{
   height: 1000vh;
 }
 
+nav{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+ nav ul li a{
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #80bfff;
+ }
+
 .hero{
   background-image: url(https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
   background-position: center;
@@ -34,22 +57,25 @@ body{
   background-repeat: no-repeat;
   height: 100%;
   width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero-overlay h2{
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   color: #ffffff;
   font-size: 10vw;
   line-height: 1;
+  top: 50%;
+  left: 50%;
   text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-/* @media screen and (max-width: 600px){
-  .hero-overlay h2{
-    font-size: 5em;
-  }
-}; */
 
+@media screen and (max-width: 600px){
+  .hero-overlay h2{
+    font-size: 13vw;
+  }
+};
