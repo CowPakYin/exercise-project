@@ -1,36 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="/style.css" rel="stylesheet" />
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width", inital-scale="1.0" />
-	<title>LPYIN Portfolio Website</title>
-	<link rel="stylesheet" href="style.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-		<div class="hero">
-			<div class="hero-overlay">
-				<nav>
-					<ul>
-						<li><a href="">Home</a></li>
-						<li><a href="">About Me</a></li>
-						<li><a href="">Works</a></li>
-						<li><a href="">Contact</a></li>
-					</ul>
-					</nav>
-				<h2>Full of<br>Passionate</h2>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>LPYIN Portfolio Website</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+
+		<!-- fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h1>LP<span class="logo_bold">YIN</span></h1>
 			</div>
-		</div>
-		<div class="about">
-			<div class="about-content">
-			<h1>About Me</h1>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eveniet nihil et omnis incidunt adipisci, vitae porro eligendi dolorem maxime expedita molestias? Quo ratione rerum esse sunt laborum! Saepe, maiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, est esse. A, rerum officiis, incidunt animi quia itaque delectus commodi natus distinctio corrupti saepe tempora molestiae? Inventore facilis molestias quas.</p>
+			<button class="nav-toggle" aria-label="toggle navigation">
+				<span class="hamburger"></span>
+			</button> <!-- hamburger-->
+
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+					<li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
+					<li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+					<li class="nav__item"><a href="#work" class="nav__link">About Me</a></li>
+				</ul> <!-- navigation bar-->
+			</nav>
+		</header>
+		<section class="intro" id="home">
+			<h1 class="section__title section__title--intro">
+				Hi, I am <strong>Alex Lau</strong>
+			</h1>
+			<p class="section__subtitle section__subtitle--intro">front-end dev</p>
+			<img src="https://raw.githubusercontent.com/CowPakYin/exercise-project/main/photo_2023-07-24_04-40-42.jpg" alt="picture of yin" class="intro__img">
+			<img src="https://raw.githubusercontent.com/CowPakYin/exercise-project/main/memoji%20alex%201.png" alt="memoji 01"
+			class="intro__img_memoji">
+
+		</section> <!--main body-->
+
+		<!-- My services-->
+		<section class="my-services" id="services">
+			<h2 class="section__title section__title--services">What I do</h2>
+			<div class="services">
+				<div class="service">
+					<h3>Design + Developmenssst</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nostrum deleniti quae modi incidunt dolorem impedit omnis labore est illum quos ex praesentium, iusto error, harum minus mollitia dicta sapiente? Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti dicta commodi dolore cupiditate nesciunt nostrum laboriosam, quia obcaecati quidem architecto ea rerum eius nemo rem delectus vel? Facere, officia!</p>
+				</div> <!-- / service-->
+
+				<div class="service">
+					<h3>Video Edit + Motion Design</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aspernatur sequi, quo iste numquam ab dolor libero, alias porro earum quia itaque quos excepturi dolorum. Dicta, impedit modi? Qui, placeat! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, soluta aspernatur adipisci, laborum, reprehenderit et expedita beatae eius eveniet unde possimus inventore impedit exercitationem mollitia nobis dolorum sit voluptate provident.</p>
+				</div> <!-- / service-->
+
+				<div class="service">
+					<h3>Wordpress</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptate fugiat explicabo, rerum cupiditate ab praesentium enim eos quasi dolores, minima neque rem! Ducimus perspiciatis sed saepe. Harum, natus tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nemo dignissimos molestiae quidem laborum minus autem praesentium in commodi officia aliquid, alias aut voluptatum corporis esse sunt iste laudantium repellat!</p>
+				</div> <!-- / service-->
+			</div><!-- / services-->
+
+			<a href="#work" class="btn">My Work</a>
+		</section>
+
+		<!-- About me-->
+		<section class="about-me" id="about">
+			<h2 class="section__title section__title--about">Who I am</h2>
+			<p class="section__subtitle section__subtitle--about"></p>
+			<div class="about-me_body">
+				<p></p>
+				<p></p>
 			</div>
-		</div>
-</body>
+			<img src="" alt="about-me picture">
+		</section>
+
+		<!-- My Work-->
+		<section class="my-work" id="work">
+			<h2 class="section__title">My work</h2>
+			<p class="section__subtitle"></p>
+			<div class="portfolio">
+				<!-- Portfolio item 01-->
+				<a href="#" class="portfolio__item">
+					<img src="" alt="" class="portfolio__img">
+				</a>
+				<!-- Portfolio item 02-->
+				<a href="#" class="portfolio__item">
+					<img src="" alt="" class="portfolio__img">
+				</a>
+				<!-- Portfolio item 03-->
+				<a href="#" class="portfolio__item">
+					<img src="" alt="" class="portfolio__img">
+				</a>
+				<!-- Portfolio item 04-->
+				<a href="#" class="portfolio__item">
+					<img src="" alt="" class="portfolio__img">
+				</a>
+				<!-- Portfolio item 05-->
+				<a href="#" class="portfolio__item">
+					<img src="" alt="" class="portfolio__img">
+				</a>
+				<!-- Portfolio item 06-->
+				<a href="#" class="portfolio__item">
+					<img src="" alt="" class="portfolio__img">
+				</a>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<a href="mailto:oimyin@gmail.com" class="footer-link">oimyin@gmail.com</a>
+			<ul class="social-list">
+				<li class="social-list__item"><a class="social-list__link" href="https://codepen.io">a</a></li>
+				<li class="social-list__item"><a class="social-list__link" href="http://dribbble.com">b</a></li>
+				<li class="social-list__item"><a class="social-list__link" href="http://twitter.com">c</a></li>
+				<li class="social-list__item"><a class="social-list__link" href="https://github.com">d</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
