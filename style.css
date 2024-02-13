@@ -58,6 +58,31 @@
     font-weight: var(--fw-bold);
   }
 
+:focus{
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+  }
+
+ /* Buttons */
+  .btn{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+    border-radius: 50px;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
   /* Typography */
 
   h1, h2, h3 {
@@ -214,11 +239,13 @@
       grid-column: -1 / 1;
       grid-row: 3;
       text-align: left;
-      position: relative;
+      position: relative;   
       width: calc(100% + 1.5em);
     }
 
   }
+
+  /* My Service Section */
 
   .my-services{
     background-color: var(--clr-dark);
@@ -234,6 +261,8 @@
     position: relative;
   }
   
+/* opacity line */
+
   .section__title--services::after{
     content: '';
     display: block;
@@ -244,10 +273,27 @@
     opacity: 0.25;
   }
 
+  .services{
+    margin-bottom: 2em;
+  }
+
+  .service {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
 @media (min-width: 800px) {
   .services{
     display: flex;
     max-width: 1000px;
     margin: 0 auto;
   }
+
+  .service + .service{
+    margin-left: 2em;
+  }
+}
+.about-me{
+  max-width: 1000px;
+  
 }
