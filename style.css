@@ -351,7 +351,19 @@
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 3px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 5px;
 }
 
+.portfolio__item{
+  overflow: hidden;
+}
+
+.portfolio__img{
+  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+
+.portfolio__img:hover, .portfolio__item:focus{
+  transform: scale(1.2);
+}
