@@ -385,7 +385,6 @@
   display: block; 
   width: 100%; 
   padding: 20px; 
-  border-left: 5px solid; 
   position: relative; 
   z-index: 2;
   color: var(--clr-accent);
@@ -417,7 +416,7 @@
 }
 
 .footer .footer-link:after {
-  background: var(--clr-accent);, 
+  background: var(--clr-accent);
 }
 
 .social-list__link {
