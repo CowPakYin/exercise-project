@@ -136,6 +136,7 @@
 header {
   display: flex;
   justify-content: space-between;
+  padding: 2em;
 }
 
 .logo {
@@ -167,40 +168,44 @@ header {
   padding: 0;
 }
 
-.nav__link {
+.nav__link{
   color: inherit;
-  text-decoration: none;
-  font-weight: var(--fw-reg);
-  font-size: var(--fs-h3);
-  text-transform: uppercase;
-}
-
-.nav__link:hover{
-  color: var(--clr-accent);
   font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
 }
 
-.nav__toggle {
-  padding: .5em;
+.nav__link:hover {
+  color: var(--clr-accent);
+}
+
+.nav-toggle{
+  padding: 0.25em;
   background: transparent;
   border: 0;
   cursor: pointer;
+  position: absolute; /* 用住先 */
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
 }
 
 .hamburger {
+
   display: block;
   position: relative;
 }
 
-.hamburger
-.hamburger::before, 
+.hamburger,
+.hamburger::before,
 .hamburger::after {
-  background: var(--clr-dark);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
+    background: var(--clr-dark);
+    width: 1.5em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
 }
+
 
 .hamburger::before,
 .hamburger::after {
@@ -210,8 +215,8 @@ header {
   right: 0;
 }
 
-.hamburger::before { top: 6px;}
-.hamburger::after { bottom: 6px;}
+.hamburger::before{top: 6px;}
+.hamburger::after{bottom: 6px;}
 
   /* Intro section */
   
