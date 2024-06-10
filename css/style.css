@@ -36,6 +36,10 @@
 
   /* General Style */
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--clr-light);
     color:  var(--clr-dark);
@@ -58,10 +62,10 @@
     font-weight: var(--fw-bold);
   }
 
-:focus{
-    outline: 3px solid var(--clr-accent);
+/* :focus{
+    outline: 1px solid var(--clr-accent);
     outline-offset: 3px;
-  }
+  } */
 
  /* Buttons */
   .btn{
@@ -132,6 +136,28 @@
     margin-bottom: 2em;
   }
 
+  .portfolio__title{
+    color: var(--clr-light);
+    font-size: 3em;
+    margin-bottom: .25em;
+  }
+
+  .portfolio__title--intro{
+    font-weight: var(--fw-reg);
+  }
+
+  .portfolio__title--intro strong {
+    display: block;
+    font-size: 2em;
+    font-weight: var(--fw-bold);
+  }
+
+  .worktab_title {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    text-align: left;
+  }
+
   /* Header */
 header {
   display: flex;
@@ -179,8 +205,8 @@ header {
   color: var(--clr-accent);
 }
 
-.nav-toggle{
-  padding: 0.25em;
+.nav-toggle /*size of hamburger button */{
+  padding: 0.75em;
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -190,20 +216,49 @@ header {
   z-index: 1000;
 }
 
+/* menu打開時 JS新建.nav-open後 */
+
+.nav-open .nav{
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(.625turn); /* menu打開時旋轉 */
+}
+
+
+.nav-open .hamburger::before{
+  transform: rotate(90deg) translateX(-6px); /* 第2條線旋轉並移動 */
+}
+
+
+.nav-open .hamburger::after{ 
+  opacity: 0; /* make the third line invisible */
+}
+
+/* .nav-open end */
+
 .hamburger {
 
   display: block;
-  position: relative;
+  position: fixed;
+  right: 10px;
+  z-index: 3;
 }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-    background: var(--clr-dark);
-    width: 1.5em;
+    background: var(--clr-accent);
+    width: 2em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
+
 }
 
 
@@ -331,6 +386,14 @@ header {
       width: calc(100% + 1.5em);
     }
 
+    .about-me__img{
+      grid-area: img;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
   }
 
   /* My Service Section */
@@ -522,4 +585,65 @@ header {
 
 .social-list__link {
   padding: .5em;
+}
+
+/* portfolio page sytle */
+
+.work_tab_container{
+  margin: 0 auto;
+}
+
+.portfolio_item_content {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.work_tab_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.work_tab_box .tab_btn {
+  font-size: var(--ff-secondary);
+  font-weight: var(--fw-reg);
+  color: var(--clr-light);
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.work_tab_box .tab_btn.active {
+  color:#16e0bd
+}
+
+.work_tab_content_box {
+  padding: 20px;
+}
+
+.work_tab_content_box .content {
+  display: none;
+}
+
+.work_tab_content_box .content.active {
+  display: block;
+}
+
+.work_tab_content_box .content h2{
+  margin-bottom: 10px;
+}
+
+.line {
+  position: absolute;
+  top: 2.5em;
+  left: 0;
+  width: 0px;
+  height: 3px;
+  background-color: var(--clr-accent);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
