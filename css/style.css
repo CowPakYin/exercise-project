@@ -391,8 +391,8 @@ header {
       position: relative;
       z-index: 2;
       width: 100%;
-      height: 200px;
       object-fit: cover;
+      scale: 0.8;
     }
   }
 
@@ -450,7 +450,10 @@ header {
 }
 
 .about-me__img{
-  box-shadow: var(--bs);
+  grid-area: img;
+  position: relative;
+  z-index: 2;
+  width: calc(100% + 2em);
 }
 
 @media (min-width: 600px) {
@@ -477,12 +480,8 @@ header {
       padding-left: 2em;
       padding-right: calc(200px + 4em);
     }
-
     .about-me__img{
-      grid-area: img;
-      position: relative;
-      z-index: 2;
-      width: calc(100% + 2em);
+      scale: 1.8;
     }
 }
 
@@ -512,8 +511,9 @@ header {
   0%{transform:scale(.5);transform-origin:top left}
   100%{transform:scale(1);transform-origin:top left}}
 
+/*
 .portfolio .portfolio__item:nth-child(n) 
-{ animation-delay: calc(n*2s);}
+{ } */
 
 .portfolio__img{
   transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
@@ -677,9 +677,23 @@ header {
     top: 0;
     left: 0;
     width: 0px;
-    height: 50px;
+    height: 30px;
     background-color: var(--clr-accent);
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
   }  
+
+  .work_tab_box .tab_btn {
+    font-size: var(--ff-primary);
+    font-weight: var(--fw-reg);
+    color: var(--clr-light);
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 2;
+    border: #fff solid 1px;
+    border-radius: 5px;
+  }
+  
 }
