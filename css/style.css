@@ -630,9 +630,10 @@ header {
   box-sizing: border-box;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .work_tab_box .tab_btn {
