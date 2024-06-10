@@ -13,7 +13,7 @@
   
   --clr-light: #fff;
   --clr-dark: #5c5c5c;
-  --clr-accent: #16e0bd;
+  --clr-accent: #E2683D;
 
   --fs-h1: 3rem; /*font-size*/
   --fs-h2: 2.25rem;
@@ -124,6 +124,7 @@
 
   .section__subtitle--intro,
   .section__subtitle--about {
+    color: var(--clr-light);
     background: var(--clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
@@ -648,7 +649,7 @@ header {
 }
 
 .work_tab_box .tab_btn.active {
-  color: var(--clr-dark);
+  color: var(--clr-light);
   border: none;
   transition: all 0.3s ease-in-out;
 }
