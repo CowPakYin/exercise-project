@@ -28,7 +28,7 @@ tabs.forEach((tab, index) => {
         line.style.width = e.target.offsetWidth + "px";
         line.style.left = e.target.offsetLeft + "px";
 
-        all_content.forEach(index=>{index.classList.remove('active')});
+        all_content.forEach(content=>{content.classList.remove('active')});
         all_content[index].classList.add('active');
 
     })

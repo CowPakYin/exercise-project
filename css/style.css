@@ -504,6 +504,17 @@ header {
   overflow: hidden;
 }
 
+.portfolio .portfolio__item {
+  animation:scale-up-top-left 0.4s; 
+}
+
+@keyframes scale-up-top-left{
+  0%{transform:scale(.5);transform-origin:top left}
+  100%{transform:scale(1);transform-origin:top left}}
+
+.portfolio .portfolio__item:nth-child(n) 
+{ animation-delay: calc(n*2s);}
+
 .portfolio__img{
   transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
@@ -591,34 +602,40 @@ header {
 
 .work_tab_container{
   margin: 0 auto;
+  max-width: 800px;
 }
 
 .portfolio_item_content {
-  padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .work_tab_box {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
 }
 
 .work_tab_box .tab_btn {
-  font-size: var(--ff-secondary);
+  font-size: var(--ff-primary);
   font-weight: var(--fw-reg);
   color: var(--clr-light);
   background: none;
   border: none;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   cursor: pointer;
+  z-index: 2;
+  border: #fff solid 1px;
+  border-radius: 5px;
 }
 
 .work_tab_box .tab_btn.active {
-  color:#16e0bd
+  color: var(--clr-dark);
+  border: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .work_tab_content_box {
@@ -627,6 +644,12 @@ header {
 
 .work_tab_content_box .content {
   display: none;
+  animation: moving .5s ease;
+}
+
+@keyframes moving {
+  from{transform: translateX(50px);opacity: 0;}; 
+  to {transform: translateX(0px); opacity: 1;};
 }
 
 .work_tab_content_box .content.active {
@@ -639,11 +662,24 @@ header {
 
 .line {
   position: absolute;
-  top: 2.5em;
+  top: 0;
   left: 0;
   width: 0px;
-  height: 3px;
+  height: 40px;
   background-color: var(--clr-accent);
-  border-radius: 10px;
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px){
+  .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 50px;
+    background-color: var(--clr-accent);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }  
 }
