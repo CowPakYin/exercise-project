@@ -72,7 +72,7 @@
     display: inline-block;
     padding: .5em 2.5em;
     background-color: var(--clr-accent);
-    color: var(--clr-dark);
+    color: var(--clr-light);
     text-decoration: none;
     cursor: pointer;
     font-size: 1rem;
@@ -521,9 +521,24 @@ header {
 
 
 .portfolio__img:hover, .portfolio__item:focus{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
+/* review later
+.more_btn {
+  font-size: var(--ff-primary);
+  font-weight: var(--fw-reg);
+  color: var(--clr-light);
+  background: none;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  z-index: 2;
+  border: #fff solid 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+*/
 /* footer */
 
 .footer {
